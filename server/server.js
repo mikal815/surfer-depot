@@ -24,6 +24,9 @@ app.use(express.json());
 app.use(xss());
 app.use(mongoSanitize());
 
+// routes
+app.use('/api', routes);
+
 
 // handle errors
 app.use(convertToApiError);
@@ -31,8 +34,7 @@ app.use((err, req, res, next) => {
     handleError(err, res)
 })
 
-// routes
-app.use('/api', routes);
+
 
 
 const port = process.env.PORT || 3001
