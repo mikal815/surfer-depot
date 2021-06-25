@@ -12,5 +12,4 @@ router.get('/isauth', auth(), authController.isauth);
 
 
 
-
 module.exports = router;
