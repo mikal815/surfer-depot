@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const aggregatePaginate = require('mongoose-aggregate-paginate-v2');
 
 const productSchema = mongoose.Schema({
     model: {
@@ -14,7 +15,7 @@ const productSchema = mongoose.Schema({
         required: true
     },
     description: {
-        required: [true, 'You need a description'],
+        required: [true, 'Ypu need a description'],
         type: String,
         maxlength: 10000
     },
@@ -48,6 +49,8 @@ const productSchema = mongoose.Schema({
         default: Date.now
     }
 });
+
+productSchema.plugin(aggregatePaginate);
 
 const Product = mongoose.model('Product', productSchema);
 module.exports = {
