@@ -307,9 +307,9 @@ header {
 }
 
 header .logo {
-    font-family: 'Monoton', cursive;
+    font-family: 'Helvetica', cursive;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 30px;
     padding: 11px 0px;
 }
 
@@ -377,7 +377,7 @@ header .log_out_link {
 
 footer .logo {
     text-align: center;
-    font-family: 'Monoton', cursive;
+    font-family: 'Helvetica', cursive;
     color: #ffffff;
     font-size: 40px;
     padding: 11px 0px;
