@@ -19,11 +19,6 @@ a:hover {
     margin: 50vh;
 }
   
-
-.container {
-    width:1100px;
-    margin: 0 auto;
-}
 .page_container {
     min-height: 75vh;
 }
@@ -39,10 +34,6 @@ a:hover {
 a {
     text-decoration: none;
     color:inherit;
-}
-
-.bck_b_light {
-    background: #272723;
 }
 
 .bck_b_dark {
@@ -301,50 +292,24 @@ select {
 /*============================
             HEADER
 ==============================*/
+
+.container {
+    background: #79b7c4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
 header {
     width: 100%;
     border-bottom: 1px solid white;
 }
 
 header .logo {
-    font-family: 'Helvetica', cursive;
+    font-family: 'Ubuntu', sans-serif;
     color: #ffffff;
-    font-size: 30px;
-    padding: 11px 0px;
-}
-
-header a,
-header span {
-    cursor: pointer;
-    margin-left: 20px;
-}
-
-header .container {
-    display: flex;
-}
-
-header .container .left{
-    width: 250px;
-}
-
-header .container .right{
-   flex-grow: 1;
-   border-left: 1px solid #eeeeee;
-   border-right: 1px solid #eeeeee;
-}
-header .container .right .top ,
-header .container .right .bottom {
-    text-transform: uppercase;
-    font-weight: 700; 
-    text-align: right;
-    color:#ffffff;
-    font-size: 15px;
-    padding: 10px 20px;
-}
-
-header .container .right .top {
-    color:#c9c9c9;
-    border-bottom: 1px solid #ffffff;
+    font-size: 40px;
 }
 
 header .cart_link {
@@ -357,7 +322,7 @@ header .cart_link span {
     background: red;
     top: 1px;
     color: #ffff;
-    left: -26px;
+    left: -15px;
     border-radius: 50%;
     padding: 0px 7px 2px 7px;
     font-size: 12px;
@@ -368,6 +333,26 @@ header .log_out_link {
     margin-left: 20px;
 }
 
+.left {
+    padding-left: 50px;
+}
+
+.right {
+    justify-items: end;
+    display: grid;
+    padding-right: 50px;
+}
+
+.top-link {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.bottom-link {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /*============================
             FOOTER
@@ -436,7 +421,7 @@ footer .business_nfo .nfo {
 }
 
 .featured_container .featured_action .tag {
-    background: #82828287;
+    background: #828282c9;
     color: #ffffff;
     padding: 0px 20px;
     text-transform: uppercase;
@@ -444,12 +429,12 @@ footer .business_nfo .nfo {
 }
 
 .featured_container .featured_action .tag.title {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 700;
 }
 
 .featured_container .featured_action .tag.low_title {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 300;
     margin-top: 10px;
 }
@@ -656,7 +641,7 @@ footer .business_nfo .nfo {
 }
 
 .collapse_items_wrapper .MuiList-root {
-    borderBottom: '1px solid #dbdbdb'
+    border-bottom: '1px solid #dbdbdb'
 }
 
 .collapse_items_wrapper .MuiListItem-root {
