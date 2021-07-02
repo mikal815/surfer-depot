@@ -297,8 +297,8 @@ select {
     background: #79b7c4;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 header {
@@ -307,9 +307,9 @@ header {
 }
 
 header .logo {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 header .cart_link {
@@ -335,11 +335,15 @@ header .log_out_link {
 
 .left {
     padding-left: 50px;
+    justify-items: start;
+    /* place-content: space-evenly; */
+    display: grid;
 }
 
 .right {
-    justify-items: end;
     display: grid;
+    justify-items: end;
+    align-content: center;
     padding-right: 50px;
 }
 
@@ -353,6 +357,7 @@ header .log_out_link {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 
 /*============================
             FOOTER
