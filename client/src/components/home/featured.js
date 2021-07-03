@@ -6,24 +6,24 @@ const Featured = () => {
 
     const corrouselItems = [
         {
-            img: '/images/featured/boardsc.jpg',
-            lineOne: 'New boards in stock',
+            img: '/images/featured/featured_image.jpg',
+            lineOne: 'New boards in stock..',
             lineTwo: 'Upgrade your quiver!',
-            lineTitle: 'Show Now',
+            linkTitle: 'SHOP HERE',
             linkTo: '/shop'
         },
         {
             img: '/images/featured/boards4.jpg',
             lineOne: 'Pro models',
-            lineTwo: 'New tech',
-            lineTitle: 'View offers',
+            lineTwo: 'New tech!',
+            linkTitle: 'SHOP HERE',
             linkTo: '/shop'
         },
         {
             img: '/images/featured/boards6.jpg',
             lineOne: 'Free Shipping',
             lineTwo: '*Orders over $500',
-            lineTitle: 'View offers',
+            linkTitle: 'SHOP HERE',
             linkTo: '/shop'
         }
     ]
