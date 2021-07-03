@@ -4,8 +4,8 @@ import SlimPromotion from 'utils/promotions/slim.block';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { productsBySort } from 'store/actions/product.actions';
-import axios from 'axios';
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
+
+import CardBlock from 'utils/products/card.blocks';
 
 const slimPromotion = {
     img: '/images/featured/shopc.jpg',
@@ -36,6 +36,15 @@ const Home = () => {
     return (
         <div>
             <Featured />
+
+            {bySold ?
+                <CardBlock
+                    items={bySold}
+                    title="Best selling boards"
+                />
+                : null}
+
+
             <SlimPromotion items={slimPromotion} />
         </div>
     )

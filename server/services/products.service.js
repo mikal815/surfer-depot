@@ -50,6 +50,7 @@ const deleteProductById = async (_id) => {
 }
 
 const allProducts = async (req) => {
+
     try {
         const products = await Product
             .find({})
@@ -95,16 +96,17 @@ const paginateProducts = async (req) => {
             });
         }
 
+
         if (req.body.min && req.body.min > 0 || req.body.max && req.body.max < 5000) {
             /// { $range: { price:[0,100 ]}} /// not supported
 
             if (req.body.min) {
                 aggQueryArray.push({ $match: { price: { $gt: req.body.min } } });
-                /// minimum price , guitar with a price greater than xxx
+                /// minimum price , board with a price greater than xxx
             }
             if (req.body.max) {
                 aggQueryArray.push({ $match: { price: { $lt: req.body.max } } });
-                /// maximum price , guitar with a price lower than xxx
+                /// maximum price , board with a price lower than xxx
             }
         }
 
