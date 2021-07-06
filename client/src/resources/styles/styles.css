@@ -491,6 +491,12 @@ footer .business_nfo .nfo {
         CARD BLOCK
 ==============================*/
 
+.cards {
+    grid-column: span 3 / auto;
+    align-self: center;
+}
+
+
 .card_block {
     margin: 110px 0px;
 }
@@ -501,6 +507,9 @@ footer .business_nfo .nfo {
     font-size: 20px;
     margin-bottom: 30px;
     font-weight: bold;
+    grid-column: span 3 / auto;
+    justify-self: center;
+    align-self: center;
 }
 
 .card_block_shop .card_item_wrapper {

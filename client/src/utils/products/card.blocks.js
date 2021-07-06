@@ -26,7 +26,7 @@ const CardBlock = ({ items, title, shop, grid }) => {
                         <div className="title">{title}</div>
                         : null
                 }
-                <div style={{
+                <div className="cards" style={{
                     display: 'flex',
                     flexWrap: 'wrap'
                 }}>

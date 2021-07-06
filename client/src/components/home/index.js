@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Featured from './featured';
 import SlimPromotion from 'utils/promotions/slim.block';
+import Loader from 'utils/loader';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { productsBySort } from 'store/actions/product.actions';
@@ -42,13 +43,21 @@ const Home = () => {
                     items={bySold}
                     title="Best selling boards"
                 />
-                : null}
+                : <Loader />}
 
 
             <SlimPromotion items={slimPromotion} />
+
+
+            {byDate ?
+                <CardBlock
+                    items={byDate}
+                    title="Newest boards at the shop"
+                />
+                : <Loader />}
+
         </div>
     )
-
 }
 
 export default Home;
