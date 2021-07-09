@@ -46,7 +46,7 @@ a {
 }
 
 .bck_b_dark {
-    background: #272723;
+    background: #79b7c4;
 }
 
 .dialog_alert {
@@ -322,6 +322,8 @@ header span {
 header .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 header .container .left{
@@ -346,7 +348,7 @@ header .container .right .bottom {
 
 header .container .right .top {
     color:#c9c9c9;
-    border-bottom: 1px solid #ffffff;
+    /* border-bottom: 1px solid #ffffff; */
 }
 
 header .cart_link {
@@ -382,14 +384,19 @@ footer .logo {
     font-family: 'JetBrains Mono', monospace;
     color: #ffffff;
     font-size: 50px;
-    padding: 11px 0px;
-    border-bottom: 1px solid #4d4d4d;    
+    padding: 15px 0px;
 }
 
 footer .wrapper {
     display: flex;
-    color: #828282;
+    /* color: #828282; */
+    color: rgb(255, 255, 255);
     margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+footer h2 {
+    padding-bottom: 15px;
 }
 
 footer .left,
