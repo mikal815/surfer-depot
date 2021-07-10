@@ -102,11 +102,11 @@ const paginateProducts = async (req) => {
 
             if (req.body.min) {
                 aggQueryArray.push({ $match: { price: { $gt: req.body.min } } });
-                /// minimum price , board with a price greater than xxx
+                /// minimum price , guitar with a price greater than xxx
             }
             if (req.body.max) {
                 aggQueryArray.push({ $match: { price: { $lt: req.body.max } } });
-                /// maximum price , board with a price lower than xxx
+                /// maximum price , guitar with a price lower than xxx
             }
         }
 
@@ -124,6 +124,8 @@ const paginateProducts = async (req) => {
             { $unwind: '$brand' }
         )
         /////////
+
+        console.log(aggQueryArray)
 
         let aggQuery = Product.aggregate(aggQueryArray);
         const options = {
