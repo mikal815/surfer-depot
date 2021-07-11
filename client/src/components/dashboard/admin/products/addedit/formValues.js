@@ -6,7 +6,21 @@ export const formValues = {
     description: '',
     price: '',
     available: '',
-    shipping: false
+    shipping: false,
+    images: []
+}
+
+
+export const getValuesToEdit = (product) => {
+    return {
+        model: product.model,
+        brand: product.brand._id,
+        description: product.description,
+        price: product.price,
+        available: product.available,
+        shipping: product.shipping,
+        images: product.images
+    }
 }
 
 export const validation = () => (
