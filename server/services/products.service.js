@@ -84,7 +84,6 @@ const paginateProducts = async (req) => {
         //     "brand":["605ad1e70738255874af0972","605ad1e70738255874af0972"],
         //     "min":200,
         //     "max":500,
-        //     "frets":24
         // }
 
         let aggQueryArray = [];
@@ -139,7 +138,7 @@ const paginateProducts = async (req) => {
         let aggQuery = Product.aggregate(aggQueryArray);
         const options = {
             page: req.body.page,
-            limit: 2,
+            limit: 6,
             sort: { date: 'desc' }
         };
         const products = await Product.aggregatePaginate(aggQuery, options);
