@@ -11,7 +11,6 @@ cloudinary.config({
     api_secret: `${process.env.CN_API_SECRET}`
 });
 
-
 const addProduct = async (body) => {
     try {
         const product = new Product({
