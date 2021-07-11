@@ -3,6 +3,7 @@ import CardBlocks from 'utils/products/card.blocks';
 import PaginateNav from 'utils/paginateNav';
 import SearchBar from './searchBar';
 import CollapseCheckbox from './collapseCheckbox';
+import RangeSelect from './rangeSelect';
 
 
 import { useDispatch, useSelector } from 'react-redux'
@@ -45,6 +46,10 @@ const Shop = () => {
         }
     }
 
+    const handleRange = (values) => {
+        setSearchValues({ min: values[0], max: values[1], page: 1 })
+    }
+
 
     useEffect(() => {
         dispatch(getAllBrands())
@@ -73,7 +78,10 @@ const Shop = () => {
                             list={brands.all}
                             handleFilters={(filters) => handleFilters(filters, 'brands')}
                         />
-                        range select
+                        <RangeSelect
+                            title="Price range"
+                            handleRange={(values) => handleRange(values)}
+                        />
                     </div>
                     <div className="right">
                         <div className="shop_options">
