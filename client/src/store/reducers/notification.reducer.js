@@ -2,7 +2,7 @@ import {
     ERROR_GLOBAL,
     SUCCESS_GLOBAL,
     CLEAR_NOTIFICATION,
-    REMOVE_PRODUCT
+    REMOVE_PRODUCT,
 } from '../types';
 
 
