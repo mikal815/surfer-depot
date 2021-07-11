@@ -52,17 +52,27 @@ const productsController = {
             next(error)
         }
     },
+    async picUpload(req, res, next) {
+        try {
+            const pic = await productsService.picUpload(req);
+            res.json(pic);
+        } catch (error) {
+            next(error)
+        }
+    }
 
 }
 
+
 // {
-//     "model":"Dice Game",
+//     "model":"Jet bt gold",
 //     "brand":"6049a1ad9c9a2615b86c04f2",
 //     "description":"This is the content of the post",
-//     "price":689,
-//     "available":5,
-//     "itemsSold":1,
+//     "price":239,
+//     "available":19,
+//     "itemsSold":10,
 //     "shipping":true
 // }
+
 
 module.exports = productsController

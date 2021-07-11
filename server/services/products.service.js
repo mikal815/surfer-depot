@@ -3,6 +3,15 @@ const { ApiError } = require('../middleware/apiError');
 const httpStatus = require('http-status');
 const mongoose = require('mongoose');
 
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({
+    cloud_name: 'db4zhj5d1',
+    api_key: '811288312677768',
+    api_secret: `${process.env.CN_API_SECRET}`
+});
+
+
 const addProduct = async (body) => {
     try {
         const product = new Product({
@@ -75,6 +84,7 @@ const paginateProducts = async (req) => {
         //     "brand":["605ad1e70738255874af0972","605ad1e70738255874af0972"],
         //     "min":200,
         //     "max":500,
+        //     "frets":24
         // }
 
         let aggQueryArray = [];
@@ -95,7 +105,6 @@ const paginateProducts = async (req) => {
                 $match: { brand: { $in: newBrandsArray } }
             });
         }
-
 
         if (req.body.min && req.body.min > 0 || req.body.max && req.body.max < 5000) {
             /// { $range: { price:[0,100 ]}} /// not supported
@@ -140,6 +149,21 @@ const paginateProducts = async (req) => {
     }
 }
 
+const picUpload = async (req) => {
+    try {
+        const upload = await cloudinary.uploader.upload(req.files.file.path, {
+            public_id: `${Date.now()}`,
+            folder: 'waves_upload'
+        });
+
+        return {
+            public_id: upload.public_id,
+            url: upload.url
+        }
+    } catch (error) {
+        throw error
+    }
+}
 
 module.exports = {
     addProduct,
@@ -147,5 +171,6 @@ module.exports = {
     updateProductById,
     deleteProductById,
     allProducts,
-    paginateProducts
+    paginateProducts,
+    picUpload
 }
