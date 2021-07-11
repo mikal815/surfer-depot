@@ -97,4 +97,21 @@ export const userChangeEmail = (data) => {
             dispatch(actions.errorGlobal(error.response.data.message))
         }
     }
+}
+
+
+
+export const userAddToCart = (item) => {
+    return async (dispatch, getState) => {
+        try {
+            const cart = getState().users.cart;
+            dispatch(actions.userAddToCart([
+                ...cart,
+                item
+            ]))
+            dispatch(actions.successGlobal(`${item.model} added to cart :)`))
+        } catch (error) {
+            dispatch(actions.errorGlobal(error.response.data.message))
+        }
+    }
 }  
