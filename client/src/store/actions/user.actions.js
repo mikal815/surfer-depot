@@ -114,4 +114,20 @@ export const userAddToCart = (item) => {
             dispatch(actions.errorGlobal(error.response.data.message))
         }
     }
+}
+
+
+
+
+export const removeFromCart = (position) => {
+    return async (dispatch, getState) => {
+        try {
+            const cart = getState().users.cart;
+            cart.splice(position, 1);
+
+            dispatch(actions.userAddToCart(cart));
+        } catch (error) {
+            dispatch(actions.errorGlobal(error.response.data.message))
+        }
+    }
 }  
