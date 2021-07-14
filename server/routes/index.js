@@ -4,6 +4,7 @@ const usersRoute = require('./users.route');
 const brandsRoute = require('./brand.route');
 const productsRoute = require('./product.route');
 const siteRoute = require('./site.route');
+const transactionRoute = require('./transaction.route');
 const router = express.Router();
 
 const routesIndex = [
@@ -26,15 +27,16 @@ const routesIndex = [
     {
         path: '/site',
         route: siteRoute
+    },
+    {
+        path: '/transaction',
+        route: transactionRoute
     }
-
 ]
-
 
 routesIndex.forEach((route) => {
     router.use(route.path, route.route);
 });
-
 
 
 module.exports = router;
