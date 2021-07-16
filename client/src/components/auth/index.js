@@ -22,12 +22,16 @@ const RegisterLogin = (props) => {
                             {formType ?
                                 <>
                                     <h1>New customers</h1>
-                                    <p>Register with your email. **For demo purposes and to enter admin view go back to 'Log In' form and use provided email: admin-demo@gmail.com and password: testing123</p>
+                                    <p>Register with your email. **For demo purposes and to enter admin view go back to 'Log In' form
+                                    and use provided email: admin-demo@gmail.com and password: testing123  . Some admin features
+                                        such as adding/removing products or editing site info have been disabled.</p>
                                 </>
                                 :
                                 <>
                                     <h1>Welcome back</h1>
-                                    <p>**For demo purposes and to enter admin view use provided email: admin-demo@gmail.com and password: testing123</p>
+                                    <p>**For demo purposes and to enter admin view use provided email: admin-demo@gmail.com and
+                                    password: testing123  . Some admin features such as adding/removing products or editing site
+                                        info have been disabled.</p>
                                 </>
                             }
 
