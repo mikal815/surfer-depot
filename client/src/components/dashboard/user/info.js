@@ -39,7 +39,7 @@ const UserInfo = ({ users }) => {
     return (
         <DashboardLayout title="User information">
             <form className="mt-3 article_form" style={{ maxWidth: '250px' }}
-                onSubmit={formik.handleSubmit}
+            // onSubmit={formik.handleSubmit}
             >
                 <div className="form-group">
                     <TextField

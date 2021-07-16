@@ -38,12 +38,12 @@ const ProductsTable = ({
                                     <td>{item.model}</td>
                                     <td>{item.available}</td>
                                     <td className="action_btn remove_btn"
-                                        onClick={() => handleModal(item._id)}
+                                    // onClick={() => handleModal(item._id)}
                                     >
                                         Remove
                                     </td>
                                     <td className="action_btn edit_btn"
-                                        onClick={() => gotoEdit(item._id)}
+                                    // onClick={() => gotoEdit(item._id)}
                                     >
                                         Edit
                                     </td>

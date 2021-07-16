@@ -171,7 +171,7 @@ const EmailStepper = ({ users }) => {
                                             className="mt-3"
                                             variant="contained"
                                             color="primary"
-                                            onClick={formik.submitForm}
+                                        // onClick={formik.submitForm}
                                         >
                                             Edit email
                                     </Button>
