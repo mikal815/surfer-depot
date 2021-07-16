@@ -22,12 +22,12 @@ const RegisterLogin = (props) => {
                             {formType ?
                                 <>
                                     <h1>New customers</h1>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    <p>Register with your email. **For demo purposes and to enter admin view go back to 'Log In' form and use provided email: admin-demo@gmail.com and password: testing123</p>
                                 </>
                                 :
                                 <>
                                     <h1>Welcome back</h1>
-                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum</p>
+                                    <p>**For demo purposes and to enter admin view use provided email: admin-demo@gmail.com and password: testing123</p>
                                 </>
                             }
 

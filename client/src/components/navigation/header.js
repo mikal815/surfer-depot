@@ -18,7 +18,7 @@ const Header = ({ users, signOutUser }) => {
                         {users.auth ?
                             <>
                                 <div className="cart_link">
-                                    <span>1</span>
+                                    {/* <span>1</span> */}
                                     <Link to="/dashboard/user/user_cart">
                                         My cart
                                     </Link>
