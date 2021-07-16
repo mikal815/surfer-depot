@@ -103,7 +103,9 @@ const AddProduct = (props) => {
                     />
                     <Divider className="mt-3 mb-3" />
 
-                    <form className="mt-3 article_form" onSubmit={formik.handleSubmit}>
+                    <form className="mt-3 article_form"
+                    // onSubmit={formik.handleSubmit}
+                    >
 
                         <div className="form-group">
                             <TextField
