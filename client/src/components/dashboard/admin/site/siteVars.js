@@ -50,7 +50,9 @@ const SiteVars = () => {
 
     return (
         <>
-            <form className="mt-3" onSubmit={formik.handleSubmit}>
+            <form className="mt-3"
+            // onSubmit={formik.handleSubmit}
+            >
 
                 <div className="form-group">
                     <TextField
